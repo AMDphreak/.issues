@@ -1,3 +1,46 @@
 # README
 
-Screenshots for GitHub issues when creating issues and editing issues via command line or AI.
+Issues Repository. Contains transcripts of issues submitted to GitHub via `gh` command and associated screenshots. Intended for use by AI when creating and editing issues. The screenshots are uploaded here for inclusion in the actual GitHub issue, as there is no way to upload an image to a GitHub issue using `gh`.
+
+## Sorting
+
+1. Create folder using the following format `issues/{issue-short-name}/` in all lowercase.
+2. Inside that, create:
+   - `issue.md` - The base issue content/description (shared template)
+   - `screenshots/` directory - Screenshots should be named descriptively and serialized if used in a serial way in the file (in steps or cause/effect).
+   - One file per repository submission named `{org}-{repo}-{issue-number}.md` (e.g., `cursor-cursor-3832.md`, `PowerShell-PowerShell-26566.md`)
+3. Each repo-specific file contains:
+   - YAML front-matter with metadata (title, repository, issue_number, url, submitted date)
+   - The issue content (which may differ slightly per repo due to cross-linking)
+
+To avoid breaking image links, update the issues when an image path changes. Use `gh` with AI to update the issues and the org, repo, and issue names, if they change.
+
+Example:
+
+```text
+Z:\code\amdphreak\.issues\issues\reverse-quote-semantics\
+```
+
+contains:
+
+- `issue.md` - The base issue content
+- `screenshots/` - Screenshot files
+- `PowerShell-PowerShell-26566.md` - PowerShell-specific submission with front-matter
+- `fish-shell-fish-shell-12133.md` - Fish Shell-specific submission with front-matter
+- `tautropfli-bash-2.md` - Bash-specific submission with front-matter
+
+Repo-specific file format:
+
+```markdown
+---
+title: Feature Request: Reverse Quote Semantics to Align with Human Intuition
+repository: PowerShell/PowerShell
+issue_number: 26566
+url: https://github.com/PowerShell/PowerShell/issues/26566
+submitted: 2025-12-02
+---
+
+# Issue content here...
+```
+
+The front-matter contains all metadata that was previously in separate `metadata.md` files. Each repo-specific file may have slightly different content due to cross-linking to related issues in other repositories.
