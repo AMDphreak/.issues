@@ -6,8 +6,6 @@ url: https://github.com/fish-shell/fish-shell/issues/12133
 submitted: 2025-12-02
 ---
 
-# Feature Request: Correct the Backwards Quote Syntax Convention
-
 ## The Problem: Inverted Semantics
 
 In everyday life and literature, **double quotes** are used to denote literal text—direct quotations, exact phrases, and verbatim content. Single quotes are the unusual exception, typically reserved for quotes within quotes or specialized typography. This is a fundamental linguistic convention that has existed for centuries.
@@ -50,8 +48,6 @@ This would align shell behavior with human intuition and linguistic convention, 
 ## Related Discussions
 
 This issue affects multiple shells and tools. For consistency across the ecosystem, similar requests are being submitted to:
-- [PowerShell](https://github.com/PowerShell/PowerShell/issues/26566)
-- [Bash](#) - [Link to be added]
-- [Zsh](#) - [Link to be added]
-- [Fish Shell](#) - [Link to be added]
-
+- <https://github.com/PowerShell/PowerShell/issues/26566>
+- <https://github.com/tautropfli/bash/issues/2>
+- [Zsh](#) - Issues disabled on zsh-users/zsh repository

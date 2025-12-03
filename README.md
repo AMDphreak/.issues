@@ -44,3 +44,19 @@ submitted: 2025-12-02
 ```
 
 The front-matter contains all metadata that was previously in separate `metadata.md` files. Each repo-specific file may have slightly different content due to cross-linking to related issues in other repositories.
+
+## Cross-Reference Links
+
+When referencing related issues in other repositories, use GitHub's automatic link format instead of markdown links:
+
+**Preferred:**
+```markdown
+- <https://github.com/org/repo/issues/123>
+```
+
+**Avoid:**
+```markdown
+- [Project Name](https://github.com/org/repo/issues/123)
+```
+
+GitHub automatically converts the `<https://...>` format to display the project name, making it cleaner and easier to maintain. This format is especially useful for cross-referencing related issues across multiple repositories.

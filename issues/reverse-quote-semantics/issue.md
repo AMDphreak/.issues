@@ -42,8 +42,7 @@ This would align shell behavior with human intuition and linguistic convention, 
 ### Related Discussions
 
 This issue affects multiple shells and tools. For consistency across the ecosystem, similar requests are being submitted to:
-- [PowerShell](https://github.com/PowerShell/PowerShell/issues/26566)
-- [Bash](https://github.com/tautropfli/bash/issues/2)
+- <https://github.com/PowerShell/PowerShell/issues/26566>
+- <https://github.com/tautropfli/bash/issues/2>
 - [Zsh](#) - Issues disabled on zsh-users/zsh repository
-- [Fish Shell](https://github.com/fish-shell/fish-shell/issues/12133)
-
+- <https://github.com/fish-shell/fish-shell/issues/12133>

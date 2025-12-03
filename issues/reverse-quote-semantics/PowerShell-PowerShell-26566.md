@@ -6,8 +6,6 @@ url: https://github.com/PowerShell/PowerShell/issues/26566
 submitted: 2025-12-02
 ---
 
-# Feature Request: Correct the Backwards Quote Syntax Convention
-
 ## The Problem: Inverted Semantics
 
 In everyday life and literature, **double quotes** are used to denote literal text—direct quotations, exact phrases, and verbatim content. Single quotes are the unusual exception, typically reserved for quotes within quotes or specialized typography. This is a fundamental linguistic convention that has existed for centuries.
@@ -21,6 +19,7 @@ This inversion creates cognitive dissonance for users. When someone writes `"Hel
 ## The Solution is Simple
 
 The fix is straightforward: **swap the semantics**. Make double quotes literal (as they are in real life) and single quotes expandable (as the unusual case). This requires:
+
 1. Updating the parser to treat double quotes as literal strings
 2. Updating the parser to treat single quotes as expandable strings
 3. Providing migration tooling (a simple find-and-replace script that swaps all double quotes with single quotes and vice versa in existing scripts)
@@ -32,6 +31,7 @@ The technical implementation is trivial—it's purely a matter of changing which
 While consistency with existing conventions has value, it should not be treated as an absolute truth. When a convention is fundamentally backwards from human intuition and creates compounding inconvenience over time, it should be corrected—no matter how established it is. The longer we wait to fix such issues, the more scripts, documentation, and muscle memory become entrenched in the wrong pattern, making the eventual correction even more painful.
 
 Every day that passes without fixing this backwards convention means:
+
 - More scripts written with counter-intuitive syntax
 - More developers learning the wrong pattern
 - More documentation perpetuating the error
@@ -42,6 +42,7 @@ The inconvenience of migration is temporary. The inconvenience of living with a 
 ## Requested Change
 
 Please consider reversing the quote semantics:
+
 - **Double quotes (`"..."`)** → Literal strings (no expansion)
 - **Single quotes (`'...'`)** → Expandable strings (with variable interpolation)
 
@@ -50,8 +51,6 @@ This would align shell behavior with human intuition and linguistic convention, 
 ## Related Discussions
 
 This issue affects multiple shells and tools. For consistency across the ecosystem, similar requests are being submitted to:
-- [PowerShell](#) - [Link to be added]
-- [Bash](#) - [Link to be added]
-- [Zsh](#) - [Link to be added]
-- [Fish Shell](#) - [Link to be added]
-
+- <https://github.com/tautropfli/bash/issues/2>
+- <https://github.com/fish-shell/fish-shell/issues/12133>
+- [Zsh](#) - Issues disabled on zsh-users/zsh repository
