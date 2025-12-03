@@ -65,3 +65,7 @@ GitHub automatically converts the `<https://...>` format to display the project 
 ## Extra Instructions for AI
 
 Create the issue in this repository locally and pass it into the `gh` command as the body, instead of passing literal text into the command line, so as to avoid shell issues with variable expansion.
+
+Do not put the title in the issue body. It is redundant and poor practice.
+
+When issuing a shell command, use single quotes for the title field so you can insert back-ticks around code substrings.
