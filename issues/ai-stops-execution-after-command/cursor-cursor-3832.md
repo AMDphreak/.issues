@@ -23,6 +23,7 @@ The AI assistant sometimes stops its thread of execution after a shell command c
 ## Expected Behavior
 
 After a shell command completes successfully, the AI should:
+
 - Recognize the command output
 - Automatically continue with the next logical step in the task
 - Not require manual user intervention to proceed
@@ -30,6 +31,7 @@ After a shell command completes successfully, the AI should:
 ## Actual Behavior
 
 The AI stops execution after command completion, even when:
+
 - The command executed successfully
 - The output is clearly visible and relevant
 - There are obvious next steps to take
@@ -42,6 +44,7 @@ The user must manually click "Cancel" on the shell output to get the AI to conti
 The following sequence occurred during a conversation where the AI was asked to verify files and then update a GitHub issue:
 
 **Command 1:**
+
 ```powershell
 PS C:\Users\rjamd> Get-ChildItem "z:\code\amdphreak\.github_issues" | Select-Object Name, Length, LastWriteTime
 
@@ -56,6 +59,7 @@ PS C:\Users\rjamd> q^C
 The command completed successfully and showed the expected files. However, the AI stopped execution instead of proceeding to the next step (updating the GitHub issue).
 
 **Command 2 (after manual intervention):**
+
 ```powershell
 PS C:\Users\rjamd> gh issue edit 3831 --repo getcursor/cursor --title "AI generates gh CLI commands without properly handling PowerShell variable expansion" --body-file "z:\code\amdphreak\.github_issues\cursor-3831-gh-cli-powershell-variable-expansion.md"
 
@@ -69,6 +73,7 @@ Again, the command completed successfully (the issue was updated), but the AI st
 ## Impact
 
 This bug significantly degrades the user experience because:
+
 - Users must manually intervene to continue multi-step tasks
 - The AI appears "stuck" even though commands are completing successfully
 - It breaks the flow of automated task completion
@@ -85,4 +90,3 @@ This bug significantly degrades the user experience because:
 ## Related
 
 This appears to be an issue with the AI's execution flow control or prompt recognition after command completion. The AI correctly interprets command output but fails to recognize that execution should continue automatically.
-

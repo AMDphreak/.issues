@@ -17,6 +17,7 @@ The integrated terminal should inherit the updated PATH environment variable and
 ## Actual Behavior
 
 The integrated terminal does not recognize the newly installed command. Checking the PATH in the integrated terminal shows that the new PATH entry is missing, even though:
+
 - The native terminal shows the correct PATH including the new entry
 - The editor has been fully closed and reopened
 - All editor processes have been terminated
@@ -64,6 +65,7 @@ The integrated terminal does NOT include `C:\Program Files (x86)\glab` in the PA
 <summary>Full PATH Comparison</summary>
 
 **Native Terminal PATH includes:**
+
 ```
 C:\Program Files (x86)\glab
 ```
@@ -89,4 +91,3 @@ The editor should properly inherit system environment variables without requirin
 ## Impact
 
 This issue affects any newly installed tools that modify the system PATH, requiring users to manually configure their shell profiles or restart their entire system to use new commands in the integrated terminal.
-

@@ -18,9 +18,9 @@ Informational Git/SSH warnings should be styled as warnings (yellow/orange) or i
 
 The message is displayed with a red circular error icon containing a white X, which is the same styling used for actual errors. This is misleading because:
 
-* The message is informational, not an error
-* It's a normal part of SSH's first-time connection process
-* Users may be alarmed by the error styling
+- The message is informational, not an error
+- It's a normal part of SSH's first-time connection process
+- Users may be alarmed by the error styling
 
 ## Steps to Reproduce
 
@@ -40,7 +40,6 @@ Related issue in Cursor: https://github.com/getcursor/cursor/issues/3833
 
 ## Environment
 
-* VS Code version: [current version]
-* OS: Windows 11
-* Git version: [current version]
-
+- VS Code version: [current version]
+- OS: Windows 11
+- Git version: [current version]

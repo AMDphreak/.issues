@@ -8,12 +8,12 @@ In everyday life and literature, **double quotes** are used to denote literal te
 
 ## Submitted Feature Requests
 
-| Tool/Shell | Repository | Issue Number | Status | Link |
-|------------|-----------|--------------|--------|------|
-| **PowerShell** | PowerShell/PowerShell | #26566 | Open | [View Issue](https://github.com/PowerShell/PowerShell/issues/26566) |
-| **Bash** | tautropfli/bash | #2 | Open | [View Issue](https://github.com/tautropfli/bash/issues/2) |
-| **Fish Shell** | fish-shell/fish-shell | #12133 | Open | [View Issue](https://github.com/fish-shell/fish-shell/issues/12133) |
-| **Zsh** | zsh-users/zsh | N/A | Issues Disabled | Issues are disabled on the zsh-users/zsh repository. Alternative submission methods may be available through the zsh mailing list. |
+| Tool/Shell     | Repository            | Issue Number | Status          | Link                                                                                                                               |
+| -------------- | --------------------- | ------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **PowerShell** | PowerShell/PowerShell | #26566       | Open            | [View Issue](https://github.com/PowerShell/PowerShell/issues/26566)                                                                |
+| **Bash**       | tautropfli/bash       | #2           | Open            | [View Issue](https://github.com/tautropfli/bash/issues/2)                                                                          |
+| **Fish Shell** | fish-shell/fish-shell | #12133       | Open            | [View Issue](https://github.com/fish-shell/fish-shell/issues/12133)                                                                |
+| **Zsh**        | zsh-users/zsh         | N/A          | Issues Disabled | Issues are disabled on the zsh-users/zsh repository. Alternative submission methods may be available through the zsh mailing list. |
 
 ## Cross-References
 
@@ -34,4 +34,3 @@ The longer we wait to fix this backwards convention, the more scripts, documenta
 
 - Original observations: `Gemini-PowerShell Single vs. Double Quotes.md`
 - Feature request template: `feature-request-quote-syntax.md`
-
