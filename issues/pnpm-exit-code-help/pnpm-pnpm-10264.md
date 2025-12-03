@@ -37,4 +37,3 @@ Using `pnpm --help` or `pnpm -h` exits with code 0, but the bare command should 
 - pnpm version: 10.24.0
 - Node.js version: v22.21.0
 - Operating System: Windows 11 (10.0.26200)
-

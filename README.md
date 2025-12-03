@@ -12,7 +12,7 @@ Issues Repository. Contains transcripts of issues submitted to GitHub via `gh` c
 3. Each repo-specific file contains:
    - YAML front-matter with metadata (title, repository, issue_number, url, submitted date)
    - The issue content (which may differ slightly per repo due to cross-linking)
-4. Run prettier before committing: `prettier --write \**.md` in `issues/`
+4. Run prettier before committing: `prettier --write \**.md` in `issues/`. Use prettier global binary if not in project's package.json (`pnpm install -g prettier` then `prettier --write \**.md`). Check how your prettier was installed with `which prettier` in bash or powershell, and `where.exe prettier` in powershell.
 
 To avoid breaking image links, update the issues when an image path changes. Use `gh` to update the issues and the org, repo, and issue names, if they change. Use AI to do this more seamlessly.
 
