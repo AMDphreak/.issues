@@ -66,7 +66,7 @@ The integrated terminal does NOT include `C:\Program Files (x86)\glab` in the PA
 
 **Native Terminal PATH includes:**
 
-```
+```text
 C:\Program Files (x86)\glab
 ```
 

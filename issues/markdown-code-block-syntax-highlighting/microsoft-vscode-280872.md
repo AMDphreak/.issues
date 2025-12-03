@@ -17,6 +17,7 @@ Markdown syntax inside a code block should be treated as literal text and not hi
 ## Actual Behavior
 
 The editor's markdown parser incorrectly interprets markdown syntax inside code blocks, causing:
+
 - Incorrect syntax highlighting
 - Markdown elements inside code blocks being treated as actual markdown (e.g., headers, lists, links)
 - Visual confusion where code block content appears to be part of the document structure
@@ -33,20 +34,23 @@ The editor's markdown parser incorrectly interprets markdown syntax inside code 
 
 ## Example
 
-```markdown
+````markdown
 ## Some Section
 
 Here's a code block with markdown inside:
 
 ```markdown
 # This header is incorrectly highlighted
+
 - This list item is incorrectly highlighted
-[This link](url) is incorrectly highlighted
+  [This link](url) is incorrectly highlighted
 ```
+````
 
 ## Impact
 
 This bug makes it difficult to:
+
 - Write documentation that includes markdown examples
 - Create tutorials showing markdown syntax
 - Display markdown code snippets accurately
@@ -54,9 +58,8 @@ This bug makes it difficult to:
 
 ## Environment
 
-* Editor: VS Code
-* OS: Windows 11
-* Markdown extension: [current version]
+- Editor: VS Code
+- OS: Windows 11
+- Markdown extension: [current version]
 
 Related issue in Cursor: <https://github.com/cursor/cursor/issues/3834>
-

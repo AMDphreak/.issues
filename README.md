@@ -12,6 +12,7 @@ Issues Repository. Contains transcripts of issues submitted to GitHub via `gh` c
 3. Each repo-specific file contains:
    - YAML front-matter with metadata (title, repository, issue_number, url, submitted date)
    - The issue content (which may differ slightly per repo due to cross-linking)
+4. Run prettier before committing: `prettier --write \**.md` in `issues/`
 
 To avoid breaking image links, update the issues when an image path changes. Use `gh` with AI to update the issues and the org, repo, and issue names, if they change.
 
