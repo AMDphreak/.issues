@@ -14,7 +14,7 @@ Issues Repository. Contains transcripts of issues submitted to GitHub via `gh` c
    - The issue content (which may differ slightly per repo due to cross-linking)
 4. Run prettier before committing: `prettier --write \**.md` in `issues/`
 
-To avoid breaking image links, update the issues when an image path changes. Use `gh` with AI to update the issues and the org, repo, and issue names, if they change.
+To avoid breaking image links, update the issues when an image path changes. Use `gh` to update the issues and the org, repo, and issue names, if they change. Use AI to do this more seamlessly.
 
 Example:
 
@@ -61,3 +61,7 @@ When referencing related issues in other repositories, use GitHub's automatic li
 ```
 
 GitHub automatically converts the `<https://...>` format to display the project name, making it cleaner and easier to maintain. This format is especially useful for cross-referencing related issues across multiple repositories.
+
+## Extra Instructions for AI
+
+Create the issue locally and pass it into the `gh` command as the body, instead of passing literal text into the command line, so as to avoid shell issues with variable expansion.
