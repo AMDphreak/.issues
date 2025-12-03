@@ -64,4 +64,4 @@ GitHub automatically converts the `<https://...>` format to display the project 
 
 ## Extra Instructions for AI
 
-Create the issue locally and pass it into the `gh` command as the body, instead of passing literal text into the command line, so as to avoid shell issues with variable expansion.
+Create the issue in this repository locally and pass it into the `gh` command as the body, instead of passing literal text into the command line, so as to avoid shell issues with variable expansion.
