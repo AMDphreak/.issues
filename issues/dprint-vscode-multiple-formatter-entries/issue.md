@@ -17,11 +17,14 @@ Only one "Dprint Code formatter" entry should be present in the formatting menu,
 
 ## Actual Behavior
 
-A new entry is added to the menu every time the extension backend is re-initialized.
+1. Multiple identical "Dprint Code formatter" entries are added to the menu every time the extension backend is re-initialized.
+2. The extension host often crashes or enters an infinite re-initialization loop with the error `Editor service failed reading from stdin: failed to fill whole buffer`. This is caused by a race condition where new initialization starts before the old one has fully cleaned up.
+
+![Crash from multiple startup race](./screenshots/dprint%20crash%20from%20multiple%20startup%20race.png)
 
 ## Impact
 
-The formatting menu becomes cluttered and confusing for the user.
+The formatting menu becomes cluttered, and the extension becomes unstable or enters a CPU-intensive loop of failed restarts.
 
 ## Environment Details
 
@@ -31,4 +34,5 @@ The formatting menu becomes cluttered and confusing for the user.
 
 ## Links
 
-- **GitHub Issue**: https://github.com/the-dev-center/dprint-vscode/issues/1
+- **Main GitHub Issue**: https://github.com/dprint/dprint-vscode/issues/132
+- **PR**: https://github.com/dprint/dprint-vscode/pull/133
