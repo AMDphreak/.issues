@@ -29,3 +29,45 @@ To establish this design paradigm and lead the ecosystem towards standardizing a
 ```
 
 1. Submitting an RFC to the official Node.js repository proposing the inclusion of an initial bootstrap payload that reads this file and pipes standard verbs down to the registered tool.
+
+## Execution Flow Diagram
+
+The following sequence diagram outlines the standardized interception and bootstrapping process when a developer attempts to execute a script:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant NodeBootstrap as Node.js (Bootstrap)
+    participant Package as package.json
+    participant Config as .node-config.json
+    participant VM as Version Manager (e.g., nvm)
+    
+    User->>NodeBootstrap: run `node index.js`
+    NodeBootstrap->>Package: Read `engines.node` requirement
+    Package-->>NodeBootstrap: returns "v22.0.0"
+    NodeBootstrap->>NodeBootstrap: Checks current execution context (e.g. v18.0.0)
+    Note over NodeBootstrap: Version Mismatch Detected!
+    NodeBootstrap->>Config: Identify registered Version Manager
+    Config-->>NodeBootstrap: {"managerExecutableName": "nvm"}
+    NodeBootstrap->>VM: Execute standard contract: `nvm install v22.0.0`
+    VM-->>NodeBootstrap: Verifies/Downloads payload
+    NodeBootstrap->>VM: Execute standard contract: `nvm use v22.0.0 -- node index.js`
+    Note over VM: Target payload executes in transient isolated $PATH shell
+```
+
+## Output Sample
+
+To the developer, this would act as a totally transparent and automatic environment correction without clobbering their other terminal sessions:
+
+```text
+> node server.js
+
+[Node.js Bootstrap] Version mismatch detected. 'package.json' requires v22.0.0, but v18.0.0 is active.
+[Node.js Bootstrap] Delegating to registered adapter: 'nvm'
+
+[nvm] Checking local cache for v22.0.0... Not found.
+[nvm] Downloading Node.js v22.0.0... Complete.
+[nvm] Spawning isolated transient shell with v22.0.0 injected to execute payload...
+
+Server listening on port 3000...
+```
