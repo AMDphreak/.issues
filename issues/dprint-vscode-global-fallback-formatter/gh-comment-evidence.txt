@@ -1,0 +1,3 @@
+**Evidence (no folder opened):** When no workspace folder is open, the extension reports that dprint is "configured as formatter but not available." The sidebar shows "NO FOLDER OPENED" while a file (e.g. from a path that has `dprint.jsonc`) is open—formatting still fails because the extension only runs in the context of an open workspace folder.
+
+**PR:** The commit mentioned in the issue was never submitted as a PR. I’ll open a PR from my fork and link it here when ready.

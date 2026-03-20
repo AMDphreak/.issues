@@ -17,7 +17,15 @@ The `dprint-vscode` extension currently restricts formatting to files specifical
 
 ## Actual Behavior
 
-The extension silently ignores the formatting request because it cannot match the file to an active workspace folder. VS Code may fall back to a generic error message.
+The extension silently ignores the formatting request because it cannot match the file to an active workspace folder. VS Code may fall back to a generic error message. When no folder is opened at all, the IDE shows: **"Extension 'dprint.dprint' is configured as formatter but not available."** (See evidence screenshot below.)
+
+## Evidence
+
+![dprint not available when no folder opened](evidence-no-folder-opened.png)
+
+- Left: sidebar shows "NO FOLDER OPENED" (no workspace loaded).
+- Right: dialog shows dprint configured as formatter but "not available."
+- File open: e.g. a CSS file from a path that has `dprint.jsonc`; formatting still unavailable because the folder is not loaded in the editor.
 
 ## Proposed Strategy
 
@@ -28,3 +36,4 @@ The extension silently ignores the formatting request because it cannot match th
 
 - Main GitHub Issue: <https://github.com/dprint/dprint-vscode/issues/136>
 - Related dprint Issue: <https://github.com/dprint/dprint/issues/1091>
+- PR: *Not yet submitted.* Issue #136 mentions a commit in a fork; a PR has not been opened or linked. Once opened, link it here and in the GitHub issue.

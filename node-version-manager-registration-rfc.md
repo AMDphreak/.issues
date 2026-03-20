@@ -16,7 +16,7 @@ This correctly forces `node` to govern its own version context requirements, whi
 
 To establish this design paradigm and lead the ecosystem towards standardizing a configuration interface:
 
-1. If so, `nvm` registers its namespace into the configuration. Node relies on the fact that any registered manager perfectly adheres to the standardized Node CLI API contract (`install <version>`, `use <version>`, `set <version>`) keeping behavior consistent between Windows, Mac, and Linux:
+- `nvm` registers its namespace into the configuration. Node relies on the fact that any registered manager perfectly adheres to the standardized Node CLI API contract (`install <version>`, `use <version>`, `set <version>`) keeping behavior consistent between Windows, Mac, and Linux:
 
 ```json
 {
@@ -27,8 +27,6 @@ To establish this design paradigm and lead the ecosystem towards standardizing a
   ]
 }
 ```
-
-1. Submitting an RFC to the official Node.js repository proposing the inclusion of an initial bootstrap payload that reads this file and pipes standard verbs down to the registered tool.
 
 ## Execution Flow Diagram
 
