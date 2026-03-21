@@ -11,4 +11,6 @@ Local copies of pull request bodies for [microsoft/winget-cli](https://github.co
 ## Fixes applied (2026-03-21)
 
 - Replaced mistaken backslash-wrapped identifiers with Markdown **inline code** (backticks).
-- Restored [#6097](https://github.com/microsoft/winget-cli/pull/6097) body (it had been truncated at the HRESULT line, likely due to unescaped `(` `)` in `gh pr create`).
+- Restored [#6097](https://github.com/microsoft/winget-cli/pull/6097) body (it had been truncated at the HRESULT line, likely due to unescaped parentheses in `gh pr create`).
+- For future edits, use `gh pr edit <n> --body-file path\to\pr-609x-body.md` (never pass long bodies inline in PowerShell).
+- Avoid raw `<` inside inline code in PR bodies if GitHub shows HTML entities in the preview; prefer plain English (“less than”) or link to a file.
