@@ -58,6 +58,8 @@ One-time checklist for moving/renaming repos and fixing the org layout. Do these
      # Move folder to Z:\code\github.com\antora-supplemental\antora-github-action
      ```
 
+**Current guidance (2026):** Use **antora-supplemental/antora-build-action** for new workflows and documentation (see [antora-workflow-templates](https://github.com/antora-supplemental/antora-workflow-templates) `action-workflow.yml`). **antora-supplemental/antora-github-action** is legacy; do not reference it in new templates or CI.
+
 ---
 
 ## 4. Rename antora-demo-template → antora-demo ✅
@@ -83,6 +85,7 @@ One-time checklist for moving/renaming repos and fixing the org layout. Do these
 | Transfer (optional rename) | AMDphreak/antora-supplemental | antora-supplemental/antora-supplemental or antora-ai-help-extension |
 | Fix / create | AMDphreak/antora-supplemental-private | antora-supplemental/.github-private (new) |
 | Transfer | AMDphreak/antora-github-action | antora-supplemental/antora-github-action |
+| Canonical build action (use this in workflows) | — | antora-supplemental/antora-build-action |
 | Rename | antora-supplemental/antora-demo-template | antora-supplemental/antora-demo |
 
 After 4, the local path for the demo repo should be `Z:\code\github.com\antora-supplemental\antora-demo` and README/clone URLs use `antora-demo`.
