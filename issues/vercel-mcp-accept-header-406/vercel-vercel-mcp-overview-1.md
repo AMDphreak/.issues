@@ -3,6 +3,7 @@ title: Vercel MCP returns opaque 406 on Streamable HTTP when Accept negotiation 
 repository: vercel/vercel-mcp-overview
 issue_number: 1
 url: https://github.com/vercel/vercel-mcp-overview/issues/1
+pull_request: https://github.com/vercel/vercel-mcp-overview/pull/2
 submitted: 2026-05-15
 ---
 
