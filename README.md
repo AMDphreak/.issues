@@ -1,8 +1,38 @@
-# README
+<a id="readme-top"></a>
 
-Issues Repository. Contains transcripts of issues submitted to GitHub via `gh` command and associated screenshots. Intended for use by AI when creating and editing issues. The screenshots are uploaded here for inclusion in the actual GitHub issue, as there is no way to upload an image to a GitHub issue using `gh`.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-## Sorting
+<div align="center">
+  <h1>.issues</h1>
+  <p>Screenshots uploaded by AI for inclusion in GitHub issues.</p>
+  <p>
+    <a href="https://github.com/AMDphreak/.issues/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/AMDphreak/.issues/issues">Request Feature</a>
+  </p>
+</div>
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+## About The Project
+
+Issues repository. Contains transcripts of issues submitted to GitHub via `gh` command and associated screenshots. Intended for use by AI when creating and editing issues. The screenshots are uploaded here for inclusion in the actual GitHub issue, as there is no way to upload an image to a GitHub issue using `gh`.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Usage
+
+### Sorting
 
 1. Create folder using the following format `issues/{issue-short-name}/` in all lowercase.
 2. Inside that, create:
@@ -46,7 +76,7 @@ submitted: 2025-12-02
 
 The front-matter contains all metadata that was previously in separate `metadata.md` files. Each repo-specific file may have slightly different content due to cross-linking to related issues in other repositories.
 
-## Cross-Reference Links
+### Cross-Reference Links
 
 When referencing related issues in other repositories, use GitHub's automatic link format instead of markdown links:
 
@@ -62,10 +92,32 @@ When referencing related issues in other repositories, use GitHub's automatic li
 
 GitHub automatically converts the `<https://...>` format to display the project name, making it cleaner and easier to maintain. This format is especially useful for cross-referencing related issues across multiple repositories.
 
-## Extra Instructions for AI
+### Extra Instructions for AI
 
 Create the issue in this repository locally and pass it into the `gh` command as the body, instead of passing literal text into the command line, so as to avoid shell issues with variable expansion.
 
 Do not put the title in the issue body. It is redundant and poor practice.
 
 When issuing a shell command, use single quotes for the title field so you can insert back-ticks around code substrings.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+Ryan Johnson — [@amdphreak](https://twitter.com/amdphreak)
+
+Project Link: [https://github.com/AMDphreak/.issues](https://github.com/AMDphreak/.issues)
+
+Site: [https://ryanjohnson.dev](https://ryanjohnson.dev)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/AMDphreak/.issues.svg?style=for-the-badge
+[contributors-url]: https://github.com/AMDphreak/.issues/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AMDphreak/.issues.svg?style=for-the-badge
+[forks-url]: https://github.com/AMDphreak/.issues/network/members
+[stars-shield]: https://img.shields.io/github/stars/AMDphreak/.issues.svg?style=for-the-badge
+[stars-url]: https://github.com/AMDphreak/.issues/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AMDphreak/.issues.svg?style=for-the-badge
+[issues-url]: https://github.com/AMDphreak/.issues/issues
