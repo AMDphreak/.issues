@@ -1,19 +1,21 @@
 <a id="readme-top"></a>
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 <div align="center">
-  <h1>.issues</h1>
-  <p>Screenshots uploaded by AI for inclusion in GitHub issues.</p>
-  <p>
+  <a href="https://github.com/AMDphreak/.issues/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/.issues.svg?style=for-the-badge" alt="Contributors"></a>
+  <a href="https://github.com/AMDphreak/.issues/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/.issues.svg?style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/AMDphreak/.issues/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/.issues.svg?style=for-the-badge" alt="Stargazers"></a>
+  <a href="https://github.com/AMDphreak/.issues/issues"><img src="https://img.shields.io/github/issues/AMDphreak/.issues.svg?style=for-the-badge" alt="Issues"></a>
+  <h3 align="center">.issues</h3>
+
+  <p align="center">
+    Screenshots uploaded by AI for inclusion in GitHub issues.<br />
+    <br />
     <a href="https://github.com/AMDphreak/.issues/issues">Report Bug</a>
-    ·
+    &middot;
     <a href="https://github.com/AMDphreak/.issues/issues">Request Feature</a>
   </p>
+
 </div>
+
 
 <details>
   <summary>Table of Contents</summary>
@@ -112,12 +114,3 @@ Site: [https://ryanjohnson.dev](https://ryanjohnson.dev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/AMDphreak/.issues.svg?style=for-the-badge
-[contributors-url]: https://github.com/AMDphreak/.issues/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AMDphreak/.issues.svg?style=for-the-badge
-[forks-url]: https://github.com/AMDphreak/.issues/network/members
-[stars-shield]: https://img.shields.io/github/stars/AMDphreak/.issues.svg?style=for-the-badge
-[stars-url]: https://github.com/AMDphreak/.issues/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AMDphreak/.issues.svg?style=for-the-badge
-[issues-url]: https://github.com/AMDphreak/.issues/issues
