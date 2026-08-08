@@ -32,21 +32,23 @@ Sticky tabs under the repo nav keep switching cheap without burying meaning unde
 
 ### Mockups (proof of concept)
 
-**Current** (empty Releases/Packages + files-first chrome):
+Each step builds on the previous.
+
+**1. Current** — empty Releases/Packages + files-first chrome:
 
 ![Current GitHub repo page showing empty Releases and Packages](https://raw.githubusercontent.com/AMDphreak/.issues/main/images/github-repo-page-visitor-first/current-github-repo-page.png)
 
-**Proposed** — README first; empty Releases/Packages gone; owner `+` affordance:
+**2. Proposed** — README first; empty Releases/Packages gone; owner `+` / Add section affordance:
 
 ![README-first layout with minimal sidebar](https://raw.githubusercontent.com/AMDphreak/.issues/main/images/github-repo-page-visitor-first/poc-readme-first-minimal-sidebar.png)
 
-**Proposed** — hover `+` → addable sections with brief descriptions:
+**3. Same layout as (2)** — hovering `+` → click to add sections with brief descriptions:
 
-![Sidebar hover add-section menu](https://raw.githubusercontent.com/AMDphreak/.issues/main/images/github-repo-page-visitor-first/poc-sidebar-hover-add-sections.png)
+![Sidebar hover add-section menu cropped](https://raw.githubusercontent.com/AMDphreak/.issues/main/images/github-repo-page-visitor-first/poc-sidebar-hover-add-sections.png)
 
-**Proposed** — Code tab for the file tree:
+**4. Same layout as (2)–(3)** — Code tab selected (file tree); minimal sidebar + Add section retained:
 
-![Code tab showing file browser](https://raw.githubusercontent.com/AMDphreak/.issues/main/images/github-repo-page-visitor-first/poc-code-tab-files.png)
+![Code tab showing file browser with minimal sidebar](https://raw.githubusercontent.com/AMDphreak/.issues/main/images/github-repo-page-visitor-first/poc-code-tab-files.png)
 
 ### Non-goals
 

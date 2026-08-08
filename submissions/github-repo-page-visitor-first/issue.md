@@ -36,19 +36,21 @@ Sticky tabs that pin under the repo nav when switching views would keep navigati
 
 ## Mockups (PoC)
 
-Current (owner-oriented empty chrome + files first):
+Each step builds on the previous.
+
+**1. Current** — empty Releases/Packages + files-first chrome:
 
 ![Current GitHub repo page](screenshots/current-github-repo-page.png)
 
-Proposed — README first, empty Releases/Packages gone, owner `+` affordance:
+**2. Proposed** — README first; empty Releases/Packages gone; owner `+` / Add section affordance:
 
 ![README-first minimal sidebar](screenshots/poc-readme-first-minimal-sidebar.png)
 
-Proposed — hover `+` → addable sections with brief descriptions:
+**3. Same layout as (2)** — hovering `+` → click to add sections with brief descriptions:
 
 ![Sidebar hover add sections](screenshots/poc-sidebar-hover-add-sections.png)
 
-Proposed — Code tab for the file tree:
+**4. Same layout as (2)–(3)** — Code tab selected (file tree); minimal sidebar + Add section retained:
 
 ![Code tab files](screenshots/poc-code-tab-files.png)
 
