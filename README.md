@@ -1,17 +1,17 @@
 <a id="readme-top"></a>
 <div align="center">
-  <a href="https://github.com/AMDphreak/.issues/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/.issues.svg?style=for-the-badge" alt="Contributors"></a>
-  <a href="https://github.com/AMDphreak/.issues/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/.issues.svg?style=for-the-badge" alt="Forks"></a>
-  <a href="https://github.com/AMDphreak/.issues/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/.issues.svg?style=for-the-badge" alt="Stargazers"></a>
-  <a href="https://github.com/AMDphreak/.issues/issues"><img src="https://img.shields.io/github/issues/AMDphreak/.issues.svg?style=for-the-badge" alt="Issues"></a>
-  <h3 align="center">.issues</h3>
+  <a href="https://github.com/AMDphreak/.issue-submissions/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Contributors"></a>
+  <a href="https://github.com/AMDphreak/.issue-submissions/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/AMDphreak/.issue-submissions/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Stargazers"></a>
+  <a href="https://github.com/AMDphreak/.issue-submissions/issues"><img src="https://img.shields.io/github/issues/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Issues"></a>
+  <h3 align="center">.issue-submissions</h3>
 
   <p align="center">
-    Screenshots uploaded by AI for inclusion in GitHub issues.<br />
+    AI issue-submission drafts, transcripts, and screenshots for embedding via <code>gh</code> (GitHub issues cannot accept image uploads from the CLI).<br />
     <br />
-    <a href="https://github.com/AMDphreak/.issues/issues">Report Bug</a>
+    <a href="https://github.com/AMDphreak/.issue-submissions/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/AMDphreak/.issues/issues">Request Feature</a>
+    <a href="https://github.com/AMDphreak/.issue-submissions/issues">Request Feature</a>
   </p>
 
 </div>
@@ -28,7 +28,9 @@
 
 ## About The Project
 
-Issues repository. Contains transcripts of issues submitted to GitHub via `gh` command and associated screenshots. Intended for use by AI when creating and editing issues. The screenshots are uploaded here for inclusion in the actual GitHub issue, as there is no way to upload an image to a GitHub issue using `gh`.
+Issue **submission** archive (renamed from `.issues` to avoid colliding with per-repo offline archives used by [dev-centr/issues-browser](https://github.com/dev-centr/issues-browser)).
+
+Contains transcripts of issues submitted via `gh` and associated screenshots. Intended for AI when creating and editing issues. Screenshots are uploaded here so they can be linked from GitHub issue bodies.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,7 +53,7 @@ To avoid breaking image links, update the issues when an image path changes. Use
 Example:
 
 ```text
-Z:\code\amdphreak\.issues\issues\reverse-quote-semantics\
+Z:\code\github.com\AMDphreak\.issue-submissions\issues\reverse-quote-semantics\
 ```
 
 contains:
@@ -108,9 +110,8 @@ When issuing a shell command, use single quotes for the title field so you can i
 
 Ryan Johnson — [@amdphreak](https://twitter.com/amdphreak)
 
-Project Link: [https://github.com/AMDphreak/.issues](https://github.com/AMDphreak/.issues)
+Project Link: [https://github.com/AMDphreak/.issue-submissions](https://github.com/AMDphreak/.issue-submissions)
 
 Site: [https://ryanjohnson.dev](https://ryanjohnson.dev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
