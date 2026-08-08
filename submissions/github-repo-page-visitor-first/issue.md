@@ -61,4 +61,4 @@ Searched Repositories / related feedback; no existing thread combines (1) hide-e
 ## Non-goals
 
 - Removing Releases/Packages for repos that use them.
-- Hiding owner tools from owners (only change *default visibility* and *progressive disclosure*).
+- Hiding owner tools from owners (only change _default visibility_ and _progressive disclosure_).
