@@ -1,0 +1,10 @@
+# Local forge metadata archives (issues-browser)
+archives/
+*.sqlite
+*.sqlite-*
+monitor.sdl
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/

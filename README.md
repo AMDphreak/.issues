@@ -1,117 +1,75 @@
 <a id="readme-top"></a>
 <div align="center">
-  <a href="https://github.com/AMDphreak/.issue-submissions/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Contributors"></a>
-  <a href="https://github.com/AMDphreak/.issue-submissions/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Forks"></a>
-  <a href="https://github.com/AMDphreak/.issue-submissions/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Stargazers"></a>
-  <a href="https://github.com/AMDphreak/.issue-submissions/issues"><img src="https://img.shields.io/github/issues/AMDphreak/.issue-submissions.svg?style=for-the-badge" alt="Issues"></a>
-  <h3 align="center">.issue-submissions</h3>
+  <a href="https://github.com/AMDphreak/.issues/graphs/contributors"><img src="https://img.shields.io/github/contributors/AMDphreak/.issues.svg?style=for-the-badge" alt="Contributors"></a>
+  <a href="https://github.com/AMDphreak/.issues/network/members"><img src="https://img.shields.io/github/forks/AMDphreak/.issues.svg?style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/AMDphreak/.issues/stargazers"><img src="https://img.shields.io/github/stars/AMDphreak/.issues.svg?style=for-the-badge" alt="Stargazers"></a>
+  <a href="https://github.com/AMDphreak/.issues/issues"><img src="https://img.shields.io/github/issues/AMDphreak/.issues.svg?style=for-the-badge" alt="Issues"></a>
+  <h3 align="center">.issues</h3>
 
   <p align="center">
-    AI issue-submission drafts, transcripts, and screenshots for embedding via <code>gh</code> (GitHub issues cannot accept image uploads from the CLI).<br />
+    Umbrella for AI issue <strong>submissions</strong> (drafts/screenshots) and local forge metadata <strong>archives</strong> used by <a href="https://github.com/dev-centr/issues-browser">issues-browser</a>.<br />
     <br />
-    <a href="https://github.com/AMDphreak/.issue-submissions/issues">Report Bug</a>
+    <a href="https://github.com/AMDphreak/.issues/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/AMDphreak/.issue-submissions/issues">Request Feature</a>
+    <a href="https://github.com/AMDphreak/.issues/issues">Request Feature</a>
   </p>
 
 </div>
 
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
 ## About The Project
 
-Issue **submission** archive (renamed from `.issues` to avoid colliding with per-repo offline archives used by [dev-centr/issues-browser](https://github.com/dev-centr/issues-browser)).
+This repository is the username-level `.issues` root:
 
-Contains transcripts of issues submitted via `gh` and associated screenshots. Intended for AI when creating and editing issues. Screenshots are uploaded here so they can be linked from GitHub issue bodies.
+```text
+.issues/
+  submissions/     # committed: draft/submitted issue markdown + screenshots
+  images/          # committed: embeddable images for gh issue bodies
+  archives/        # gitignored: issues-browser SQLite backups per forge repo
+  monitor.sdl      # gitignored: daemon monitor list (local)
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- **submissions/** — transcripts of issues filed via `gh`, plus screenshots (GitHub CLI cannot upload images).
+- **archives/** — managed by [dev-centr/issues-browser](https://github.com/dev-centr/issues-browser) as an offline forge metadata backup (`archives/<host>/<owner>/<repo>/database.sqlite`).
 
 ## Usage
 
-### Sorting
+### Submissions layout
 
-1. Create folder using the following format `issues/{issue-short-name}/` in all lowercase.
-2. Inside that, create:
-   - `issue.md` - The base issue content/description (shared template)
-   - `screenshots/` directory - Screenshots should be named descriptively and serialized if used in a serial way in the file (in steps or cause/effect).
-   - One file per repository submission named `{org}-{repo}-{issue-number}.md` (e.g., `cursor-cursor-3832.md`, `PowerShell-PowerShell-26566.md`)
-3. Each repo-specific file contains:
-   - YAML front-matter with metadata (title, repository, issue_number, url, submitted date)
-   - The issue content (which may differ slightly per repo due to cross-linking)
-4. Run prettier before committing: `prettier --write \**.md` in `issues/`. Use prettier global binary if not in project's package.json (`pnpm install -g prettier` then `prettier --write \**.md`). Check how your prettier was installed with `which prettier` in bash or powershell, and `where.exe prettier` in powershell.
+1. Create `submissions/{issue-short-name}/` (lowercase).
+2. Inside that folder:
+   - `issue.md` — shared base description
+   - `screenshots/` — descriptive names
+   - `{org}-{repo}-{issue-number}.md` per forge submission (YAML front-matter + body)
+3. Run prettier on markdown under `submissions/` before committing.
 
-To avoid breaking image links, update the issues when an image path changes. Use `gh` to update the issues and the org, repo, and issue names, if they change. Use AI to do this more seamlessly.
-
-Example:
+Example path:
 
 ```text
-Z:\code\github.com\AMDphreak\.issue-submissions\issues\reverse-quote-semantics\
+Z:\code\github.com\AMDphreak\.issues\submissions\reverse-quote-semantics\
 ```
 
-contains:
-
-- `issue.md` - The base issue content
-- `screenshots/` - Screenshot files
-- `PowerShell-PowerShell-26566.md` - PowerShell-specific submission with front-matter
-- `fish-shell-fish-shell-12133.md` - Fish Shell-specific submission with front-matter
-- `tautropfli-bash-2.md` - Bash-specific submission with front-matter
-
-Repo-specific file format:
+Repo-specific file front-matter:
 
 ```markdown
 ---
-title: Feature Request: Reverse Quote Semantics to Align with Human Intuition
+title: Feature Request: …
 repository: PowerShell/PowerShell
 issue_number: 26566
 url: https://github.com/PowerShell/PowerShell/issues/26566
 submitted: 2025-12-02
 ---
-
-# Issue content here...
 ```
 
-The front-matter contains all metadata that was previously in separate `metadata.md` files. Each repo-specific file may have slightly different content due to cross-linking to related issues in other repositories.
+### Extra instructions for AI
 
-### Cross-Reference Links
+Create the issue body in this repository and pass the file into `gh` (avoid shell expansion of body text). Do not put the title in the issue body.
 
-When referencing related issues in other repositories, use GitHub's automatic link format instead of markdown links:
+### Archives (issues-browser)
 
-**Preferred:**
-```markdown
-- <https://github.com/org/repo/issues/123>
-```
-
-**Avoid:**
-```markdown
-- [Project Name](https://github.com/org/repo/issues/123)
-```
-
-GitHub automatically converts the `<https://...>` format to display the project name, making it cleaner and easier to maintain. This format is especially useful for cross-referencing related issues across multiple repositories.
-
-### Extra Instructions for AI
-
-Create the issue in this repository locally and pass it into the `gh` command as the body, instead of passing literal text into the command line, so as to avoid shell issues with variable expansion.
-
-Do not put the title in the issue body. It is redundant and poor practice.
-
-When issuing a shell command, use single quotes for the title field so you can insert back-ticks around code substrings.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Do not commit `archives/` or `*.sqlite`. The backup app creates `contents/` under each archive for a possible future body offload; bodies currently live in SQLite.
 
 ## Contact
 
 Ryan Johnson — [@amdphreak](https://twitter.com/amdphreak)
 
-Project Link: [https://github.com/AMDphreak/.issue-submissions](https://github.com/AMDphreak/.issue-submissions)
-
-Site: [https://ryanjohnson.dev](https://ryanjohnson.dev)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Project Link: [https://github.com/AMDphreak/.issues](https://github.com/AMDphreak/.issues)
