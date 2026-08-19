@@ -41,6 +41,8 @@ This repository is the username-level `.issues` root:
    - `screenshots/` — descriptive names
    - `{org}-{repo}-{issue-number}.md` per forge submission (YAML front-matter + body)
 3. Run prettier on markdown under `submissions/` before committing.
+4. **Always push** after commit — recording a submission is filing, not a local draft. Skill `issues-repo-record` (agent-rules).
+5. If the forge body embeds screenshots, commit and push under `images/{issue-short-name}/` **before** referencing `raw.githubusercontent.com/...` URLs in the issue or PR text.
 
 Example path:
 
@@ -62,7 +64,7 @@ submitted: 2025-12-02
 
 ### Extra instructions for AI
 
-Create the issue body in this repository and pass the file into `gh` (avoid shell expansion of body text). Do not put the title in the issue body.
+Create the issue body in this repository and pass the file into `gh` (avoid shell expansion of body text). Do not put the title in the issue body. Skill **`issues-repo-record`**: always commit and push; push images before embed; use `status: submitted`, `pending`, or `blocked` on per-forge files (see that skill).
 
 ### Archives (issues-browser)
 
