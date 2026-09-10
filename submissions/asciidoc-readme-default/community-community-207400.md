@@ -1,22 +1,24 @@
 ---
 title: AsciiDoc as README default: repo-creation chooser plus user/org/repo preferences
 repository: community/community
-issue_number: 207398
-url: https://github.com/orgs/community/discussions/207398
-submitted: 2026-09-09
+issue_number: 207400
+url: https://github.com/orgs/community/discussions/207400
+submitted: 2026-09-10
 status: submitted
 media: raw_github
 kind: discussion
 category: Repositories
-discussion_state: closed
-discussion_state_reason: outdated
-closed_by: github-actions[bot]
-superseded_by: 207400
-superseded_url: https://github.com/orgs/community/discussions/207400
-closed_note: >-
-  Bot closed ~8s after create: Community only accepts discussions created
-  through the GitHub UI + category templates (not gh CLI). Superseded by
-  UI+template filing #207400 (source:ui, open).
+discussion_type: Product Feedback
+labels:
+  - Repositories
+  - Product Feedback
+  - source:ui
+discussion_state: open
+supersedes: 207398
+source_path: github_ui_template
+note: >-
+  Filed via GitHub UI + Repositories DISCUSSION_TEMPLATE (source:ui).
+  Supersedes #207398 which github-actions closed for non-UI create.
 cross_post:
   antora_zulip:
     status: blocked
@@ -34,10 +36,17 @@ cross_post:
       Upvotes and comments welcome:
       https://github.com/orgs/community/discussions/207400
     next_step: >-
-      Prefer the open discussion #207400 in any cross-post. Sign in to
-      antora.zulipchat.com, search #users, then post the draft with the
-      #207400 URL (not the closed #207398).
+      1) Sign in to https://antora.zulipchat.com (GitHub OAuth works).
+      2) Search #users for an existing GitHub AsciiDoc/README topic; if none,
+      New topic in #users with the draft above.
+      3) Alternate: https://asciidoctor.zulipchat.com #users with the same note.
 ---
+
+### Discussion Type
+
+Product Feedback
+
+### Body
 
 GitHub already renders AsciiDoc well, but every path that creates a README still assumes Markdown. Please add a first-class way to choose AsciiDoc (`README.adoc`) at repo creation time, and to set that choice as a default for users, organizations, and repositories.
 
@@ -101,7 +110,3 @@ GitHub already supports AsciiDoc rendering for repository files and wikis. The g
 ### Product areas
 
 Repositories (create repo, README, wiki defaults); optional CLI/`gh` and REST create-repo fields.
-
-### Media notes
-
-`gh discussion edit` / `gh discussion comment` on gh 2.100.0 do **not** support `--attach` (issues/PRs do). Mockups embedded via `raw.githubusercontent.com` fallback after push to `AMDphreak/.issues` `main`. Local backup under `images/asciidoc-readme-default/`.
