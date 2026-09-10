@@ -23,6 +23,18 @@ Workarounds (template repos, deleting the generated Markdown README) work, but t
    - REST/GraphQL create-repository: something like `auto_init` + `readme_format: "asciidoc" | "markdown"`
    - `gh repo create --add-readme --readme-format asciidoc` (or `adoc`)
 
+### Mockups
+
+Concept mockups for the proposed UI (not product screenshots):
+
+![Repo creation: README format chooser](images/asciidoc-readme-default/repo-create-readme-format.png)
+
+![Organization default README format](images/asciidoc-readme-default/org-default-readme-format.png)
+
+![User default README format](images/asciidoc-readme-default/user-default-readme-format.png)
+
+![Empty-repo banner: Add a README with format chooser](images/asciidoc-readme-default/empty-repo-add-readme.png)
+
 ### Additional suggestions (same feature family)
 
 These would make the default feel complete rather than only fixing the one checkbox:
