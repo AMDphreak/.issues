@@ -1,3 +1,13 @@
+---
+title: Terminal crashes when opening leftover PowerShell profile after pwsh uninstall / AppX half-state
+repository: microsoft/terminal
+issue_number: 20680
+url: https://github.com/microsoft/terminal/issues/20680
+submitted: 2026-09-14
+status: submitted
+media: raw_github
+---
+
 After uninstalling PowerShell 7 (`pwsh`), Windows Terminal still offered a **PowerShell** profile in the new-tab menu. Opening that profile (or a new tab that targets it) crashed the Terminal app instead of showing an error or falling back to a working profile. The machine still had a WindowsApps execution-alias stub for `pwsh`, which makes the failure mode worse than a clean “file not found.”
 
 ### Windows Terminal version
@@ -61,3 +71,4 @@ and a list entry:
 - Related older work treated missing shells as blank-tab / error-dialog cases (e.g. historical #982 / #1348). This report is specifically: **whole-app crash** + **dynamic PowershellCore profile not cleaned up on uninstall** + **WindowsApps alias stub** / half-serviced AppX.
 - Repro path used Start Menu → Windows PowerShell 5.1 (opens Terminal with that profile), then new tab targeting the broken `pwsh` profile.
 - Not asking Terminal to own winget packaging; the ask is resilient launch when the dynamic profile’s target is missing or only an alias stub.
+- Packaging cross-links: https://github.com/PowerShell/PowerShell/issues/27031#issuecomment-5671116207 · https://github.com/microsoft/winget-pkgs/issues/362294#issuecomment-5671116447
