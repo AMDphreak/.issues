@@ -14,4 +14,4 @@ Opened Kroki proposal PR for optional `svg-theme` post-process hook.
 RFC: https://github.com/dev-centr/themed-svg/blob/main/proposals/2026-09-15-generator-kroki-themed-svg.md  
 Issue: https://github.com/yuzutech/kroki/issues/2146  
 Hook contract: https://github.com/dev-centr/themed-svg/blob/main/proposals/acceleration/kroki/HOOK-CONTRACT.md  
-Mermaid companion: https://github.com/mermaid-js/mermaid/pull/8008
+Mermaid companion: https://github.com/mermaid-js/mermaid/pull/8265
