@@ -36,6 +36,6 @@ OpenShellOrg drafted this as a CLI sanitation protocol and a small reference lib
 - Protocol: https://github.com/openshellorg/docs (page: Config Key Sanitation / SOS mandatory protocols)
 - Published docs (after site rebuild): https://docs.opensh.org/open-shell-org/standard-config-key-sanitation.html
 - Reference library: https://github.com/openshellorg/config-key-sanitation
-- Practitioner write-up: https://docs.devcentr.org/general-knowledge/explanation/architecture/config-key-sanitation.html
+- Practitioner write-up: https://docs.devcentr.org/general-knowledge/explanation/architecture/config-key-sanitation/
 
 Happy to refine the index schema with maintainers. The goal is explainability that outlives any single major version.
