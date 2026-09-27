@@ -2,7 +2,7 @@ npm currently warns about unknown user config keys and says that support will st
 
 Please treat outdated config keys as a forever-detectable catalog problem—not something to delete from recognition.
 
-## Proposal: Config Key Sanitation
+## Proposal: Config Lifecycle Management
 
 Keep a shipped, machine-readable **key index** for every config key npm has ever recognized. Keys move through statuses; they are never removed from the index:
 
@@ -31,11 +31,13 @@ Keep a shipped, machine-readable **key index** for every config key npm has ever
 
 ## Prior art / reference
 
-OpenShellOrg drafted this as a CLI sanitation protocol and a small reference library:
+OpenShellOrg drafted this as a CLI config lifecycle protocol and a small reference library:
 
-- Protocol: https://github.com/openshellorg/docs (page: Config Key Sanitation / SOS mandatory protocols)
-- Published docs (after site rebuild): https://docs.opensh.org/open-shell-org/standard-config-key-sanitation.html
-- Reference library: https://github.com/openshellorg/config-key-sanitation
-- Practitioner write-up: https://docs.devcentr.org/general-knowledge/explanation/architecture/config-key-sanitation/
+- Protocol: https://github.com/openshellorg/docs (page: Config Lifecycle Management / SOS mandatory protocols)
+- Published docs: https://docs.opensh.org/open-shell-org/standard-config-lifecycle-management.html
+- Reference library: https://github.com/openshellorg/config-lifecycle
+- Practitioner write-up: https://docs.devcentr.org/general-knowledge/explanation/architecture/config-lifecycle-management/
 
 Happy to refine the index schema with maintainers. The goal is explainability that outlives any single major version.
+
+_Originally filed under the name Config Key Sanitation; renamed to Config Lifecycle Management on 2026-09-26. Old links redirect._
