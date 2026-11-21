@@ -1,8 +1,9 @@
 ---
-title: Canvas tab loads a localhost page without becoming a Browser tab
+title: Agent loads a nodejs project into existing Canvas page instead of new Browser tab
 repository: cursor/forum
 issue_number: 178948
-url: https://forum.cursor.com/t/canvas-tab-loads-a-localhost-page-without-becoming-a-browser-tab/178948
+url: https://forum.cursor.com/t/agent-loads-a-nodejs-project-into-existing-canvas-page-instead-of-new-browser-tab/178948
+previous_url: https://forum.cursor.com/t/canvas-tab-loads-a-localhost-page-without-becoming-a-browser-tab/178948
 submitted: 2026-11-21
 status: submitted
 media: none
